@@ -13,8 +13,9 @@ A modern, responsive art portfolio website for Hour Ahmed (By Hour) showcasing d
 - **Social Media Integration**: Direct links to Instagram and TikTok
 - **Portfolio Sections**: 
   - 8 Drawing showcase slots
-  - 5 Creative bookmark displays
+  - 3 Creative bookmark displays (varied sizes, no cropping)
 - **SEO Optimized**: Proper metadata for search engines
+- **Interactive**: Clickable images with zoom functionality
 - **Two Versions**: HTML (instant) and Next.js (advanced)
 
 ## Getting Started
@@ -58,11 +59,11 @@ Make sure you have Node.js (version 18 or higher) installed on your computer.
 
 1. **For Drawings**: 
    - Add your image files to the `public/images/drawings/` folder
-   - Update the drawing placeholders in `src/app/page.tsx`
+   - Images will automatically display in the portfolio
 
 2. **For Bookmarks**: 
    - Add your bookmark images to the `public/images/bookmarks/` folder
-   - Update the bookmark placeholders in `src/app/page.tsx`
+   - Currently displays bookmark1.png, bookmark2.png, and bookmark3.png
 
 ### Updating Social Media Links
 
@@ -74,12 +75,9 @@ The social media links are already configured for:
 
 1. **Push your code to GitHub**:
    ```bash
-   git init
    git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin YOUR_GITHUB_REPO_URL
-   git push -u origin main
+   git commit -m "Portfolio ready for deployment"
+   git push origin main
    ```
 
 2. **Deploy on Vercel**:
@@ -91,15 +89,45 @@ The social media links are already configured for:
 
 3. **Your portfolio will be live** at `https://your-project-name.vercel.app`
 
+## Current Portfolio Content
+
+### Drawings (8 artworks):
+- abwab_poem.png
+- alne3am.png  
+- dancer.png
+- fish.png
+- gold_pattern.png
+- houses.png
+- mattab.png
+- v7.png
+
+### Bookmarks (3 designs):
+- bookmark2.png (displayed as Bookmark 1)
+- bookmark1.png (displayed as Bookmark 2)
+- bookmark3.png (displayed as Bookmark 3)
+
+## Features Implemented
+
+✅ **Responsive grid layout for drawings**  
+✅ **Clickable images with zoom modal**  
+✅ **Varied bookmark sizes (natural, no cropping)**  
+✅ **Social media integration**  
+✅ **Professional styling with Tailwind CSS**  
+✅ **Mobile-friendly design**
+
 ## Project Structure
 
 ```
+├── index.html                   # Main portfolio page (instant version)
 ├── src/
 │   ├── app/
 │   │   ├── globals.css          # Global styles
 │   │   ├── layout.tsx           # App layout
-│   │   └── page.tsx             # Main portfolio page
-├── public/                      # Static assets (add your images here)
+│   │   └── page.tsx             # Next.js portfolio page
+├── public/
+│   └── images/
+│       ├── drawings/            # 8 drawing files
+│       └── bookmarks/           # 3 bookmark files
 ├── package.json                 # Dependencies and scripts
 ├── tailwind.config.ts           # Tailwind CSS configuration
 └── README.md                    # This file
@@ -107,10 +135,11 @@ The social media links are already configured for:
 
 ## Technologies Used
 
-- **Next.js 14**: React framework for production
-- **TypeScript**: Type-safe JavaScript
-- **Tailwind CSS**: Utility-first CSS framework
-- **React**: UI library
+- **HTML5 & CSS3**: For the instant version
+- **Tailwind CSS**: Utility-first CSS framework via CDN
+- **JavaScript**: Interactive image modal functionality
+- **Next.js 14**: React framework (advanced version)
+- **TypeScript**: Type-safe JavaScript (advanced version)
 
 ## Support
 
@@ -119,4 +148,4 @@ If you need help with customization or deployment, feel free to reach out throug
 ---
 
 **Created for Hour Ahmed (By Hour)**  
-Portfolio Website - 2025
+Art Portfolio Website - 2025
