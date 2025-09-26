@@ -9,7 +9,11 @@ import { Suspense } from "react"
 export const metadata: Metadata = {
   title: "By Hour - Mixed Media Artist",
   description: "Hour Ahmed - Mixed Media Artist & Creator showcasing posters, bookmarks, and artistic works",
-  generator: "v0.app",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
