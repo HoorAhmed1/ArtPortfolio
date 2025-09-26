@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Instagram, Folder, X, ZoomIn, Palette, Bookmark } from "lucide-react"
+import { Instagram, Folder, X, ZoomIn, Bookmark } from "lucide-react"
 import { SiTiktok } from "react-icons/si"
 import { SocialLink } from "@/app/components/SocialLink"
 
@@ -36,17 +36,14 @@ export default function Home() {
   }, [modalImage])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-100 via-pink-50 to-cyan-100">
-      <header className="bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 text-white shadow-xl">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+    <div className="min-h-screen" style={{ background: "linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%)" }}>
+      <header className="header-custom text-white shadow-sm">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-3 sm:gap-4">
-              <div className="bg-white/20 p-2 sm:p-3 rounded-full backdrop-blur-sm">
-                <Palette className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-              </div>
               <div className="text-center sm:text-left">
                 <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">By Hour</h1>
-                <p className="text-pink-100 font-medium text-sm sm:text-base">Mixed Media Artist</p>
+                <p className="text-white/80 font-medium text-sm sm:text-base">Mixed Media Artist</p>
               </div>
             </div>
             <div className="flex items-center gap-3 sm:gap-6">
@@ -54,7 +51,7 @@ export default function Home() {
                 href="https://instagram.com/hourrahmed"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 sm:px-4 py-2 rounded-full transition-all duration-300"
                 aria-label="Follow on Instagram"
               >
                 <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -64,7 +61,7 @@ export default function Home() {
                 href="https://tiktok.com/@hourahmed1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 sm:px-4 py-2 rounded-full transition-all duration-300"
                 aria-label="Follow on TikTok"
               >
                 <SiTiktok className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -74,7 +71,7 @@ export default function Home() {
                 href="https://drive.google.com/drive/folders/1dvrNgnnLliSLaF29AVwjjJ8WsnpET1N-?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 sm:px-4 py-2 rounded-full transition-all duration-300"
                 aria-label="View Art Drive"
               >
                 <Folder className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -86,20 +83,15 @@ export default function Home() {
       </header>
 
       <div className="min-h-screen">
-        <section className="py-8 sm:py-12 lg:py-20 bg-gradient-to-br from-white/90 via-purple-50/80 to-pink-50/90 backdrop-blur-sm">
+        <section className="py-8 sm:py-12 lg:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8 sm:mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-2 rounded-lg shadow-lg">
-                  <Palette className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                </div>
-                <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  Posters
-                </h2>
-              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                Posters
+              </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {[
                 { src: "/images/drawings/mattab.png", title: "Mattab" },
                 { src: "/images/drawings/v7.png", title: "V7" },
@@ -152,17 +144,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-8 sm:py-12 lg:py-20 bg-gradient-to-br from-cyan-50/80 via-blue-50/90 to-indigo-100/80">
+        <section className="py-8 sm:py-12 lg:py-16" style={{ background: "linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%)" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8 sm:mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg shadow-lg">
-                  <Bookmark className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                </div>
-                <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Bookmarks
-                </h2>
-              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Bookmarks</h2>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 items-end">
@@ -233,12 +218,8 @@ export default function Home() {
         </section>
       </div>
 
-      <footer className="bg-gradient-to-br from-gray-950 via-purple-950/60 to-black text-white py-12 sm:py-16">
-        <div className="max-w-6xl mx-auto px-4 text-center">
+      <footer className="bg-gray-900 text-white py-12">        <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-2 sm:p-3 rounded-full shadow-lg">
-              <Palette className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-            </div>
             <h3 className="text-2xl sm:text-3xl font-bold">By Hour</h3>
           </div>
 
@@ -273,7 +254,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="border-t border-gray-700 pt-6 sm:pt-8">
+          <div className="border-t border-white/20 pt-6 sm:pt-8">
             <p className="text-gray-400 text-xs sm:text-sm">© 2025 By Hour. All rights reserved.</p>
           </div>
         </div>
@@ -304,9 +285,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 text-white/80 text-xs sm:text-sm bg-black/30 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full">
-            Press ESC or click outside to close
-          </div>
+          
         </div>
       )}
     </div>
