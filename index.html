@@ -51,28 +51,33 @@
         .clickable-image:hover {
             transform: scale(1.02);
         }
+        
+        /* Custom header color */
+        .header-custom {
+            background-color: #263373;
+        }
     </style>
 </head>
 <body class="font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-6">
+    <!-- Simple Header -->
+    <header class="header-custom text-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3">
             <div class="flex justify-between items-center flex-wrap">
                 <div>
-                    <h1 class="text-3xl font-bold text-gray-900">By Hour</h1>
-                    <p class="text-gray-600">Hour Ahmed - Mixed Media Artist</p>
+                    <h1 class="text-2xl font-bold">By Hour</h1>
+                    <p class="text-sm opacity-90">Mixed Media Artist</p>
                 </div>
-                <div class="flex space-x-4 mt-4 sm:mt-0">
+                <div class="flex space-x-4 mt-2 sm:mt-0">
                     <a href="https://instagram.com/hourrahmed" target="_blank" 
-                       class="text-pink-600 hover:text-pink-800 transition-colors">
+                       class="text-white hover:text-blue-200 transition-colors text-sm">
                         Instagram
                     </a>
                     <a href="https://tiktok.com/@hourahmed1" target="_blank" 
-                       class="text-blue-600 hover:text-blue-800 transition-colors">
+                       class="text-white hover:text-blue-200 transition-colors text-sm">
                         TikTok
                     </a>
                     <a href="https://drive.google.com/drive/folders/1dvrNgnnLliSLaF29AVwjjJ8WsnpET1N-?usp=drive_link" target="_blank" 
-                       class="text-green-600 hover:text-green-800 transition-colors">
+                       class="text-white hover:text-blue-200 transition-colors text-sm">
                         Drive
                     </a>
                 </div>
@@ -85,97 +90,13 @@
         <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-4">
                 <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">
-                    My Drawings
+                    My Posters
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Drawing 1 - abwab_poem.png -->
-                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                        <img src="./public/images/drawings/abwab_poem.png" 
-                             alt="Abwab Poem by Hour Ahmed" 
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mx-auto mb-4"></div>
-                                <p class="text-gray-600">Abwab Poem</p>
-                                <p class="text-sm text-gray-500">Loading...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Drawing 2 - alne3am.png -->
-                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                        <img src="public/images/drawings/alne3am.png" 
-                             alt="Alne3am by Hour Ahmed" 
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full mx-auto mb-4"></div>
-                                <p class="text-gray-600">Alne3am</p>
-                                <p class="text-sm text-gray-500">Loading...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Drawing 3 - dancer.png -->
-                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                        <img src="public/images/drawings/dancer.png" 
-                             alt="Dancer by Hour Ahmed" 
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-400 rounded-full mx-auto mb-4"></div>
-                                <p class="text-gray-600">Dancer</p>
-                                <p class="text-sm text-gray-500">Loading...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Drawing 4 - fish.png -->
-                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                        <img src="public/images/drawings/fish.png" 
-                             alt="Fish by Hour Ahmed" 
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full mx-auto mb-4"></div>
-                                <p class="text-gray-600">Fish</p>
-                                <p class="text-sm text-gray-500">Loading...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Drawing 5 - gold_pattern.png -->
-                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                        <img src="public/images/drawings/gold_pattern.png" 
-                             alt="Gold Pattern by Hour Ahmed" 
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-400 rounded-full mx-auto mb-4"></div>
-                                <p class="text-gray-600">Gold Pattern</p>
-                                <p class="text-sm text-gray-500">Loading...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Drawing 6 - houses.png -->
-                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-                        <img src="public/images/drawings/houses.png" 
-                             alt="Houses by Hour Ahmed" 
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-full mx-auto mb-4"></div>
-                                <p class="text-gray-600">Houses</p>
-                                <p class="text-sm text-gray-500">Loading...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Drawing 7 - mattab.png -->
+                    <!-- Drawing 1 - mattab.png -->
                     <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                         <img src="public/images/drawings/mattab.png" 
-                             alt="Mattab by Hour Ahmed" 
+                             alt="" 
                              class="w-full h-full object-cover"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="w-full h-full flex items-center justify-center" style="display: none;">
@@ -186,16 +107,100 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Drawing 8 - v7.png -->
+                    <!-- Drawing 2 - v7.png -->
                     <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                         <img src="public/images/drawings/v7.png" 
-                             alt="V7 by Hour Ahmed" 
+                             alt="" 
                              class="w-full h-full object-cover"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="w-full h-full flex items-center justify-center" style="display: none;">
                             <div class="text-center">
                                 <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-full mx-auto mb-4"></div>
                                 <p class="text-gray-600">V7</p>
+                                <p class="text-sm text-gray-500">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Drawing 3 - fish.png -->
+                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                        <img src="public/images/drawings/fish.png" 
+                             alt="" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full mx-auto mb-4"></div>
+                                <p class="text-gray-600">Fish</p>
+                                <p class="text-sm text-gray-500">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Drawing 4 - houses.png -->
+                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                        <img src="public/images/drawings/houses.png" 
+                             alt="" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-full mx-auto mb-4"></div>
+                                <p class="text-gray-600">Houses</p>
+                                <p class="text-sm text-gray-500">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Drawing 5 - gold_pattern.png -->
+                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                        <img src="public/images/drawings/gold_pattern.png" 
+                             alt="" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-400 rounded-full mx-auto mb-4"></div>
+                                <p class="text-gray-600">Gold Pattern</p>
+                                <p class="text-sm text-gray-500">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Drawing 6 - dancer.png -->
+                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                        <img src="public/images/drawings/dancer.png" 
+                             alt="" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-400 rounded-full mx-auto mb-4"></div>
+                                <p class="text-gray-600">Dancer</p>
+                                <p class="text-sm text-gray-500">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Drawing 7 - alne3am.png -->
+                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                        <img src="public/images/drawings/alne3am.png" 
+                             alt="" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full mx-auto mb-4"></div>
+                                <p class="text-gray-600">Alne3am</p>
+                                <p class="text-sm text-gray-500">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Drawing 8 - abwab_poem.png -->
+                    <div class="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                        <img src="public/images/drawings/abwab_poem.png" 
+                             alt="" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full flex items-center justify-center" style="display: none;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mx-auto mb-4"></div>
+                                <p class="text-gray-600">Abwab Poem</p>
                                 <p class="text-sm text-gray-500">Loading...</p>
                             </div>
                         </div>
@@ -210,33 +215,51 @@
                 <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">
                     Bookmarks
                 </h3>
-                <div class="flex flex-wrap justify-center gap-4 items-end">
-                    <!-- Bookmark 1 (was bookmark2.png) - Medium size -->
-                    <div class="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-36">
+                <div class="flex flex-wrap justify-center gap-4 items-center">
+                    <!-- Bookmark 2 - Small -->
+                    <div class="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-32">
                         <img src="public/images/bookmarks/bookmark2.png" 
-                             alt="Bookmark 1 by Hour Ahmed" 
-                             class="w-full h-80 object-contain rounded clickable-image"
+                             alt="" 
+                             class="w-full h-56 object-contain rounded clickable-image"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="w-full h-80 bg-gradient-to-br from-purple-400 to-pink-400 rounded" style="display: none;"></div>
-                        <p class="text-sm text-gray-700 mt-2 text-center font-medium">Bookmark 1</p>
-                    </div>
-                    <!-- Bookmark 2 (was bookmark1.png) - Largest -->
-                    <div class="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-44">
-                        <img src="public/images/bookmarks/bookmark1.png" 
-                             alt="Bookmark 2 by Hour Ahmed" 
-                             class="w-full h-96 object-contain rounded clickable-image"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="w-full h-96 bg-gradient-to-br from-blue-400 to-purple-400 rounded" style="display: none;"></div>
+                        <div class="w-full h-56 bg-gradient-to-br from-blue-400 to-purple-400 rounded" style="display: none;"></div>
                         <p class="text-sm text-gray-700 mt-2 text-center font-medium">Bookmark 2</p>
                     </div>
-                    <!-- Bookmark 3 - Smallest -->
-                    <div class="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-32">
+                    <!-- Bookmark 3 - Medium -->
+                    <div class="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-36">
                         <img src="public/images/bookmarks/bookmark3.png" 
-                             alt="Bookmark 3 by Hour Ahmed" 
+                             alt="" 
+                             class="w-full h-64 object-contain rounded clickable-image"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="w-full h-64 bg-gradient-to-br from-green-400 to-blue-400 rounded" style="display: none;"></div>
+                        <p class="text-sm text-gray-700 mt-2 text-center font-medium">Bookmark 3</p>
+                    </div>
+                    <!-- Bookmark 1 - Center, largest -->
+                    <div class="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-40">
+                        <img src="public/images/bookmarks/bookmark1.png" 
+                             alt="" 
                              class="w-full h-72 object-contain rounded clickable-image"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="w-full h-72 bg-gradient-to-br from-green-400 to-blue-400 rounded" style="display: none;"></div>
-                        <p class="text-sm text-gray-700 mt-2 text-center font-medium">Bookmark 3</p>
+                        <div class="w-full h-72 bg-gradient-to-br from-purple-400 to-pink-400 rounded" style="display: none;"></div>
+                        <p class="text-sm text-gray-700 mt-2 text-center font-medium">Bookmark 1</p>
+                    </div>
+                    <!-- Bookmark 4 - Medium -->
+                    <div class="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-36">
+                        <img src="public/images/bookmarks/bookmark4.png" 
+                             alt="" 
+                             class="w-full h-64 object-contain rounded clickable-image"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="w-full h-64 bg-gradient-to-br from-yellow-400 to-orange-400 rounded" style="display: none;"></div>
+                        <p class="text-sm text-gray-700 mt-2 text-center font-medium">Bookmark 4</p>
+                    </div>
+                    <!-- Bookmark 5 - Small -->
+                    <div class="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-32">
+                        <img src="public/images/bookmarks/bookmark5.png" 
+                             alt="" 
+                             class="w-full h-56 object-contain rounded clickable-image"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="w-full h-56 bg-gradient-to-br from-red-400 to-pink-400 rounded" style="display: none;"></div>
+                        <p class="text-sm text-gray-700 mt-2 text-center font-medium">Bookmark 5</p>
                     </div>
                 </div>
             </div>
@@ -270,14 +293,12 @@
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImage">
-        <div id="caption" class="text-center text-white mt-4 text-lg"></div>
     </div>
 
     <script>
         // Get the modal
         var modal = document.getElementById("imageModal");
         var modalImg = document.getElementById("modalImage");
-        var captionText = document.getElementById("caption");
         
         // Get all images and add click event
         var images = document.querySelectorAll('img[src*="drawings"], img[src*="bookmarks"]');
@@ -286,7 +307,6 @@
             img.onclick = function(){
                 modal.style.display = "block";
                 modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
             }
         });
         

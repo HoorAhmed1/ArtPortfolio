@@ -4,16 +4,13 @@ import { useState } from 'react';
 
 export default function Home() {
   const [modalImage, setModalImage] = useState<string | null>(null);
-  const [modalAlt, setModalAlt] = useState<string>('');
 
-  const openModal = (src: string, alt: string) => {
+  const openModal = (src: string) => {
     setModalImage(src);
-    setModalAlt(alt);
   };
 
   const closeModal = () => {
     setModalImage(null);
-    setModalAlt('');
   };
 
   // Close modal with Escape key
@@ -25,20 +22,20 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50" onKeyDown={handleKeyDown} tabIndex={-1}>
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="flex justify-between items-center">
+      {/* Simple Header */}
+      <header className="header-custom text-white shadow-sm">
+        <div className="max-w-6xl mx-auto px-4 py-3">
+          <div className="flex justify-between items-center flex-wrap">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">By Hour</h1>
-              <p className="text-gray-600">Hour Ahmed - Mixed Media Artist</p>
+              <h1 className="text-2xl font-bold">By Hour</h1>
+              <p className="text-sm opacity-90">Mixed Media Artist</p>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-2 sm:mt-0">
               <a
                 href="https://instagram.com/hourrahmed"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-pink-600 hover:text-pink-800 transition-colors"
+                className="text-white hover:text-blue-200 transition-colors text-sm"
               >
                 Instagram
               </a>
@@ -46,7 +43,7 @@ export default function Home() {
                 href="https://tiktok.com/@hourahmed1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 transition-colors"
+                className="text-white hover:text-blue-200 transition-colors text-sm"
               >
                 TikTok
               </a>
@@ -54,7 +51,7 @@ export default function Home() {
                 href="https://drive.google.com/drive/folders/1dvrNgnnLliSLaF29AVwjjJ8WsnpET1N-?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-600 hover:text-green-800 transition-colors"
+                className="text-white hover:text-blue-200 transition-colors text-sm"
               >
                 Drive
               </a>
@@ -68,86 +65,86 @@ export default function Home() {
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              My Drawings
+              My Posters
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Drawing 1 */}
+              {/* Drawing 1 - Mattab */}
               <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                 <img
-                  src="./public/images/drawings/abwab_poem.png"
-                  alt="Abwab Poem by Hour Ahmed"
+                  src="/images/drawings/mattab.png"
+                  alt=""
                   className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('./public/images/drawings/abwab_poem.png', 'Abwab Poem by Hour Ahmed')}
+                  onClick={() => openModal('/images/drawings/mattab.png')}
                 />
               </div>
               
-              {/* Drawing 2 */}
+              {/* Drawing 2 - V7 */}
               <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                 <img
-                  src="public/images/drawings/alne3am.png"
-                  alt="Alne3am by Hour Ahmed"
+                  src="/images/drawings/v7.png"
+                  alt=""
                   className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/drawings/alne3am.png', 'Alne3am by Hour Ahmed')}
+                  onClick={() => openModal('/images/drawings/v7.png')}
                 />
               </div>
               
-              {/* Drawing 3 */}
+              {/* Drawing 3 - Fish */}
               <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                 <img
-                  src="public/images/drawings/dancer.png"
-                  alt="Dancer by Hour Ahmed"
+                  src="/images/drawings/fish.png"
+                  alt=""
                   className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/drawings/dancer.png', 'Dancer by Hour Ahmed')}
+                  onClick={() => openModal('/images/drawings/fish.png')}
                 />
               </div>
               
-              {/* Drawing 4 */}
+              {/* Drawing 4 - Houses */}
               <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                 <img
-                  src="public/images/drawings/fish.png"
-                  alt="Fish by Hour Ahmed"
+                  src="/images/drawings/houses.png"
+                  alt=""
                   className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/drawings/fish.png', 'Fish by Hour Ahmed')}
+                  onClick={() => openModal('/images/drawings/houses.png')}
                 />
               </div>
               
-              {/* Drawing 5 */}
+              {/* Drawing 5 - Gold Pattern */}
               <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                 <img
-                  src="public/images/drawings/gold_pattern.png"
-                  alt="Gold Pattern by Hour Ahmed"
+                  src="/images/drawings/gold_pattern.png"
+                  alt=""
                   className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/drawings/gold_pattern.png', 'Gold Pattern by Hour Ahmed')}
+                  onClick={() => openModal('/images/drawings/gold_pattern.png')}
                 />
               </div>
               
-              {/* Drawing 6 */}
+              {/* Drawing 6 - Dancer */}
               <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                 <img
-                  src="public/images/drawings/houses.png"
-                  alt="Houses by Hour Ahmed"
+                  src="/images/drawings/dancer.png"
+                  alt=""
                   className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/drawings/houses.png', 'Houses by Hour Ahmed')}
+                  onClick={() => openModal('/images/drawings/dancer.png')}
                 />
               </div>
               
-              {/* Drawing 7 */}
+              {/* Drawing 7 - Al Ne3am */}
               <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                 <img
-                  src="public/images/drawings/mattab.png"
-                  alt="Mattab by Hour Ahmed"
+                  src="/images/drawings/alne3am.png"
+                  alt=""
                   className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/drawings/mattab.png', 'Mattab by Hour Ahmed')}
+                  onClick={() => openModal('/images/drawings/alne3am.png')}
                 />
               </div>
               
-              {/* Drawing 8 */}
+              {/* Drawing 8 - Abwab Poem */}
               <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                 <img
-                  src="public/images/drawings/v7.png"
-                  alt="V7 by Hour Ahmed"
+                  src="/images/drawings/abwab_poem.png"
+                  alt=""
                   className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/drawings/v7.png', 'V7 by Hour Ahmed')}
+                  onClick={() => openModal('/images/drawings/abwab_poem.png')}
                 />
               </div>
             </div>
@@ -160,34 +157,54 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Bookmarks
             </h3>
-            <div className="flex flex-wrap justify-center gap-4 items-end">
-              {/* Bookmark 1 - Medium size */}
-              <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-36">
+            <div className="flex flex-wrap justify-center gap-4 items-center">
+              {/* Bookmark 2 - Small size */}
+              <div className="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-32">
                 <img
-                  src="public/images/bookmarks/bookmark2.png"
-                  alt="Bookmark 1 by Hour Ahmed"
-                  className="w-full h-80 object-contain rounded cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/bookmarks/bookmark2.png', 'Bookmark 1 by Hour Ahmed')}
+                  src="/images/bookmarks/bookmark2.png"
+                  alt=""
+                  className="w-full h-56 object-contain rounded cursor-pointer transition-transform hover:scale-105"
+                  onClick={() => openModal('/images/bookmarks/bookmark2.png')}
                 />
               </div>
               
-              {/* Bookmark 2 - Large size */}
-              <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-44">
+              {/* Bookmark 3 - Medium size */}
+              <div className="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-36">
                 <img
-                  src="public/images/bookmarks/bookmark1.png"
-                  alt="Bookmark 2 by Hour Ahmed"
-                  className="w-full h-96 object-contain rounded cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/bookmarks/bookmark1.png', 'Bookmark 2 by Hour Ahmed')}
+                  src="/images/bookmarks/bookmark3.png"
+                  alt=""
+                  className="w-full h-64 object-contain rounded cursor-pointer transition-transform hover:scale-105"
+                  onClick={() => openModal('/images/bookmarks/bookmark3.png')}
                 />
               </div>
               
-              {/* Bookmark 3 - Small size */}
-              <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-32">
+              {/* Bookmark 1 - Center, largest */}
+              <div className="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-40">
                 <img
-                  src="public/images/bookmarks/bookmark3.png"
-                  alt="Bookmark 3 by Hour Ahmed"
+                  src="/images/bookmarks/bookmark1.png"
+                  alt=""
                   className="w-full h-72 object-contain rounded cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('public/images/bookmarks/bookmark3.png', 'Bookmark 3 by Hour Ahmed')}
+                  onClick={() => openModal('/images/bookmarks/bookmark1.png')}
+                />
+              </div>
+              
+              {/* Bookmark 4 - Medium size */}
+              <div className="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-36">
+                <img
+                  src="/images/bookmarks/bookmark4.png"
+                  alt=""
+                  className="w-full h-64 object-contain rounded cursor-pointer transition-transform hover:scale-105"
+                  onClick={() => openModal('/images/bookmarks/bookmark4.png')}
+                />
+              </div>
+              
+              {/* Bookmark 5 - Small size */}
+              <div className="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-32">
+                <img
+                  src="/images/bookmarks/bookmark5.png"
+                  alt=""
+                  className="w-full h-56 object-contain rounded cursor-pointer transition-transform hover:scale-105"
+                  onClick={() => openModal('/images/bookmarks/bookmark5.png')}
                 />
               </div>
             </div>
@@ -252,13 +269,10 @@ export default function Home() {
           {/* Modal content - matching HTML version */}
           <img
             src={modalImage}
-            alt={modalAlt}
+            alt=""
             className="max-w-[90%] max-h-[90%] object-contain block mx-auto"
             onClick={(e) => e.stopPropagation()}
           />
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-white text-lg">
-            {modalAlt}
-          </div>
         </div>
       )}
     </div>

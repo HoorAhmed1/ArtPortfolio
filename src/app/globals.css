@@ -20,6 +20,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Custom header color */
+.header-custom {
+  background-color: #263373;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
