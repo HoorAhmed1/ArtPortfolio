@@ -62,30 +62,58 @@ export default function Home() {
 
       <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%)' }}>
         {/* Drawings Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              My Posters
+        <section className="py-4 sm:py-6 lg:py-8 bg-white">
+          <div className="max-w-5xl mx-auto px-2 sm:px-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
+              Posters
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
               {/* Drawing 1 - Mattab */}
-              <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+              <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer relative"
+                   onClick={() => openModal('/images/drawings/mattab.png')}>
                 <img
                   src="/images/drawings/mattab.png"
                   alt=""
-                  className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('/images/drawings/mattab.png')}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
+                {/* Mobile zoom indicator - subtle */}
+                <div className="absolute top-2 right-2 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-20 rounded-full p-1">
+                  <svg className="w-3 h-3 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                  </svg>
+                </div>
+                {/* Desktop center zoom indicator - hover only */}
+                <div className="hidden sm:flex absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white bg-opacity-90 rounded-full p-2">
+                    <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                  </div>
+                </div>
               </div>
               
               {/* Drawing 2 - V7 */}
-              <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+              <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer relative"
+                   onClick={() => openModal('/images/drawings/v7.png')}>
                 <img
                   src="/images/drawings/v7.png"
                   alt=""
-                  className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
-                  onClick={() => openModal('/images/drawings/v7.png')}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
+                {/* Mobile zoom indicator - subtle */}
+                <div className="absolute top-2 right-2 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-20 rounded-full p-1">
+                  <svg className="w-3 h-3 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                  </svg>
+                </div>
+                {/* Desktop center zoom indicator - hover only */}
+                <div className="hidden sm:flex absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white bg-opacity-90 rounded-full p-2">
+                    <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                  </div>
+                </div>
               </div>
               
               {/* Drawing 3 - Fish */}
@@ -138,8 +166,18 @@ export default function Home() {
                 />
               </div>
               
-              {/* Drawing 8 - Abwab Poem */}
+              {/* Drawing 8 - Insect */}
               <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                <img
+                  src="/images/drawings/Insect.png"
+                  alt=""
+                  className="w-full h-full object-cover cursor-pointer transition-transform hover:scale-105"
+                  onClick={() => openModal('/images/drawings/Insect.png')}
+                />
+              </div>
+              
+              {/* Drawing 9 - Abwab Poem */}
+              <div className="bg-gray-100 aspect-square rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden col-span-2 sm:col-span-1 justify-self-center max-w-[50%] sm:max-w-none">
                 <img
                   src="/images/drawings/abwab_poem.png"
                   alt=""
@@ -152,12 +190,12 @@ export default function Home() {
         </section>
 
         {/* Bookmarks Section */}
-        <section className="py-16" style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%)' }}>
-          <div className="max-w-7xl mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
+        <section className="py-8 sm:py-12 lg:py-16" style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%)' }}>
+          <div className="max-w-7xl mx-auto px-2 sm:px-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
               Bookmarks
             </h3>
-            <div className="flex flex-wrap justify-center gap-4 items-center">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-4 items-center">
               {/* Bookmark 2 - Small size */}
               <div className="bg-white px-2 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden w-32">
                 <img
