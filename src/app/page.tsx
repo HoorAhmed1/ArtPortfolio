@@ -230,7 +230,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
             <SocialLink
               href="https://instagram.com/hourrahmed"
-              label="@hourrahmed"
+              label="hourrahmed"
               Icon={Instagram}
               accentClassName="text-pink-400"
               textClassName="text-pink-300 group-hover:text-pink-200"
@@ -238,7 +238,7 @@ export default function Home() {
             />
             <SocialLink
               href="https://tiktok.com/@hourahmed1"
-              label="@hourahmed1"
+              label="hourahmed1"
               Icon={({ className }) => <SiTiktok className={className} />}
               accentClassName="text-blue-400"
               textClassName="text-blue-300 group-hover:text-blue-200"
