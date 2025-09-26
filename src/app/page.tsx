@@ -91,7 +91,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {[
                 { src: "/images/drawings/mattab.png", title: "Mattab" },
                 { src: "/images/drawings/v7.png", title: "V7" },
@@ -285,9 +285,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 text-white/80 text-xs sm:text-sm bg-black/30 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full">
-            Press ESC or click outside to close
-          </div>
+          
         </div>
       )}
     </div>
