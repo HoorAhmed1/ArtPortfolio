@@ -117,7 +117,7 @@ export default function Home() {
                     }
                   }}
                 >
-                  <div className="aspect-[4/5] overflow-hidden">
+                  <div className="aspect-square sm:aspect-[4/5] overflow-hidden">
                     <img
                       src={artwork.src || "/placeholder.svg"}
                       alt={artwork.title}
