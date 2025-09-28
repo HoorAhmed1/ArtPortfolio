@@ -83,9 +83,9 @@ export default function Home() {
       </header>
 
       <div className="min-h-screen">
-        <section className="py-8 sm:py-12 lg:py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-8 sm:mb-12">
+        <section className="py-6 sm:py-8 lg:py-12 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-6 sm:mb-8">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
                 Posters
               </h2>
@@ -117,7 +117,7 @@ export default function Home() {
                     }
                   }}
                 >
-                  <div className="aspect-square overflow-hidden">
+                  <div className="aspect-[4/5] overflow-hidden">
                     <img
                       src={artwork.src || "/placeholder.svg"}
                       alt={artwork.title}
