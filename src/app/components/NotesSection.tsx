@@ -56,6 +56,45 @@ const NOTES: Note[] = [
       },
     ],
   },
+  {
+    id: "fish",
+    number: "NOTE 02",
+    readTime: "2 MIN",
+    workLabel: "ON FISH",
+    title: "The gift that became a batch",
+    excerpt:
+      "A friend liked Fish so much it ended up on his desk — then a small special edition made its way to Cairo Comic Con.",
+    thumb: "/images/notes/fish-mousepad.jpg",
+    thumbAlt: "Fish mouse pad with a black wireless mouse on a white surface",
+    paragraphs: [
+      <>
+        A friend liked Fish so much that I had it printed as a mouse pad and gave it to him as a
+        gift. Seeing the drawing sit on a desk every day made it feel like it had left the page in
+        a useful way.
+      </>,
+      <>
+        That was enough of a nudge. I made a small special-edition batch and brought them to Cairo
+        Comic Con — same fish, same red field of linework, just something you could actually use.
+      </>,
+    ],
+    sources: [
+      {
+        src: "/images/drawings/fish.png",
+        caption: "The drawing.",
+        alt: "Original Fish illustration with orange and blue fish on a red patterned field",
+      },
+      {
+        src: "/images/notes/fish-mousepad-desk.jpg",
+        caption: "On a desk.",
+        alt: "Fish mouse pad on a glass desk with a black mouse and a floral coffee mug",
+      },
+      {
+        src: "/images/notes/fish-mousepad.jpg",
+        caption: "The mouse pad.",
+        alt: "Fish mouse pad with a black wireless mouse on a white background",
+      },
+    ],
+  },
 ]
 
 type NotesSectionProps = {
@@ -109,17 +148,6 @@ export function NotesSection({ index = "06" }: NotesSectionProps) {
               </div>
             </button>
           ))}
-
-          <div
-            className="flex min-h-[160px] flex-col justify-center gap-2 rounded-2xl border border-dashed border-line-strong bg-surface px-5 py-5"
-            aria-hidden="true"
-          >
-            <span className="text-[17px] font-extrabold text-ink">Note 02</span>
-            <span className="max-w-[280px] text-[13px] leading-[1.5] text-muted">
-              Room for a second one — V7 or Fish. Two is plenty; more starts to read as a blog
-              rather than a portfolio.
-            </span>
-          </div>
         </div>
       </section>
 

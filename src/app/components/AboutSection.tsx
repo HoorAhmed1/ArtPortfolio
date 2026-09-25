@@ -23,7 +23,7 @@ const GALLERY = [
   },
 ] as const
 
-export function AboutSection({ index = "07" }: AboutSectionProps) {
+export function AboutSection({ index = "08" }: AboutSectionProps) {
   return (
     <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
       <div className="flex flex-col gap-3">
