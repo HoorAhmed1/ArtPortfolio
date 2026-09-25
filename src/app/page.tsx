@@ -4,6 +4,7 @@ import { useState } from "react"
 import { ComicReader, type ComicPage } from "@/app/components/ComicReader"
 import { ImageLightbox } from "@/app/components/ImageLightbox"
 import { AboutSection } from "@/app/components/AboutSection"
+import { AtTheTableSection } from "@/app/components/AtTheTableSection"
 import { NotesSection } from "@/app/components/NotesSection"
 import { SectionEyebrow } from "@/app/components/SectionEyebrow"
 
@@ -238,9 +239,12 @@ export default function Home() {
 
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
         <SectionEyebrow index="03" title="Process" />
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5">
+        <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0 md:pb-0 md:snap-none">
           {PROCESS_STEPS.map((step) => (
-            <figure key={step.title} className="m-0 flex flex-col gap-2.5">
+            <figure
+              key={step.title}
+              className="m-0 flex w-[min(72vw,260px)] shrink-0 snap-start flex-col gap-2.5 md:w-auto md:min-w-0 md:shrink"
+            >
               <button
                 type="button"
                 onClick={() => setModal({ src: step.src, alt: step.alt })}
@@ -319,7 +323,9 @@ export default function Home() {
 
       <NotesSection index="06" />
 
-      <AboutSection index="07" />
+      <AtTheTableSection index="07" />
+
+      <AboutSection index="08" />
 
       <footer className="flex w-full max-w-page flex-wrap items-start justify-between gap-6 border-t border-line pt-10">
         <div className="flex flex-col gap-1.5">
