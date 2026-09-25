@@ -56,22 +56,22 @@ const ILLUSTRATIONS = [
   {
     src: "/images/drawings/mattab.png",
     title: "Mattab",
-    meta: "medium, size, year",
+    meta: "Digital and acrylic markers, 2025",
   },
   {
     src: "/images/drawings/v7.png",
     title: "V7",
-    meta: "medium, size, year",
+    meta: "Digital and acrylic markers, 2025",
   },
   {
     src: "/images/drawings/fish.png",
     title: "Fish",
-    meta: "medium, size, year",
+    meta: "Markers and digital, 2025",
   },
   {
     src: "/images/drawings/cards.jpg",
     title: "Cards",
-    meta: "medium, size, year",
+    meta: "Digital and markers, 2026",
   },
 ]
 
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
 
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="04" title="Digital illustration" />
+        <SectionEyebrow index="04" title="Digital Comics" />
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
           {[1, 2].map((n) => (
             <figure key={n} className="m-0 flex flex-col gap-2.5">
@@ -287,7 +287,7 @@ export default function Home() {
       </section>
 
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="05" title="Works on paper" />
+        <SectionEyebrow index="05" title="Illustrations" />
         <div className="grid grid-cols-2 gap-6">
           {ILLUSTRATIONS.map((art) => (
             <figure key={art.src} className="m-0 flex flex-col gap-2.5">
