@@ -1,14 +1,28 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { Figtree, IBM_Plex_Sans_Arabic } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
 
+const figtree = Figtree({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-figtree",
+  display: "swap",
+})
+
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-arabic",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
-  title: "By Hour - Mixed Media Artist",
-  description: "Hour Ahmed - Mixed Media Artist & Creator showcasing posters, bookmarks, and artistic works",
+  title: "Hour Ahmed — Comics and mixed-media artist",
+  description:
+    "Portfolio of Hour Ahmed, a Cairo-based comics and mixed-media artist. Featuring the comic ذباب وعودة, digital work, works on paper, and printed bookmarks.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -23,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`${figtree.variable} ${ibmPlexArabic.variable} font-sans antialiased`}>
         <Suspense>
           {children}
           <Analytics />

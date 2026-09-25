@@ -3,30 +3,111 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ground: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-inset: #f2f4f7;
+  --color-line: #e4e7ec;
+  --color-line-strong: #cdd3dc;
+  --color-ink: #101828;
+  --color-body: #344054;
+  --color-muted: #667085;
+  --color-faint: #98a2b3;
+  --color-brand: #feee00;
+  --color-brand-tint: #fffbe0;
+  --color-link: #1f6feb;
+  --shadow-cover: 0 12px 40px rgba(16, 24, 40, 0.1);
+  --shadow-page: 0 10px 34px rgba(16, 24, 40, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  background: var(--color-ground);
+  font-family: var(--font-figtree), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom header color */
-.header-custom {
-  background-color: #263373;
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-ink);
+  text-decoration: underline;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic), var(--font-figtree), sans-serif;
+}
+
+.font-mono-ui {
+  font-family: ui-monospace, Menlo, monospace;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.45s ease-out both;
+}
+
+.animate-rise-in {
+  animation: rise-in 0.55s ease-out both;
+}
+
+.animate-rise-in-delay-1 {
+  animation: rise-in 0.55s ease-out 0.08s both;
+}
+
+.animate-rise-in-delay-2 {
+  animation: rise-in 0.55s ease-out 0.16s both;
+}
+
+.page-crossfade {
+  animation: fade-in 120ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-in,
+  .animate-rise-in,
+  .animate-rise-in-delay-1,
+  .animate-rise-in-delay-2,
+  .page-crossfade {
+    animation: none;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
   }
 }
