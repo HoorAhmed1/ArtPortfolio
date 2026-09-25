@@ -3,11 +3,14 @@
 import { useState } from "react"
 import { ComicReader, type ComicPage } from "@/app/components/ComicReader"
 import { ImageLightbox } from "@/app/components/ImageLightbox"
+import { AboutSection } from "@/app/components/AboutSection"
+import { NotesSection } from "@/app/components/NotesSection"
 import { SectionEyebrow } from "@/app/components/SectionEyebrow"
 
-const EMAIL = "mailto:hello@example.com"
-const INSTAGRAM = "https://instagram.com/hourrahmed"
-const TIKTOK = "https://tiktok.com/@hourahmed1"
+const EMAIL = "mailto:Hourahmed11@gmail.com"
+const INSTAGRAM_HOORDIDIT = "https://www.instagram.com/hoordidit"
+const INSTAGRAM_HOURRAHMED = "https://www.instagram.com/hourrahmed"
+const TIKTOK = "https://www.tiktok.com/@hourahmed"
 const DRIVE =
   "https://drive.google.com/drive/folders/1dvrNgnnLliSLaF29AVwjjJ8WsnpET1N-?usp=drive_link"
 
@@ -72,19 +75,20 @@ const ILLUSTRATIONS = [
   },
 ]
 
-const BOOKMARKS = [
-  "/images/bookmarks/bookmark1.png",
-  "/images/bookmarks/bookmark2.png",
-  "/images/bookmarks/bookmark3.png",
-  "/images/bookmarks/bookmark4.png",
-  "/images/bookmarks/bookmark5.png",
-]
+// Bookmarks section hidden — assets kept in public/images/bookmarks/
+// const BOOKMARKS = [
+//   "/images/bookmarks/bookmark1.png",
+//   "/images/bookmarks/bookmark2.png",
+//   "/images/bookmarks/bookmark3.png",
+//   "/images/bookmarks/bookmark4.png",
+//   "/images/bookmarks/bookmark5.png",
+// ]
 
 const FACTS = [
   { label: "Year", value: "2026" },
   { label: "Pages", value: "6 + cover + back" },
   { label: "Language", value: "Egyptian Arabic" },
-  { label: "Medium", value: "Ink on paper" },
+  { label: "Medium", value: "Digital" },
   { label: "Format", value: "A4, black and white" },
   { label: "Credits", value: "Written, drawn, lettered by Hour Ahmed" },
 ]
@@ -136,12 +140,20 @@ export default function Home() {
               Email
             </a>
             <a
-              href={INSTAGRAM}
+              href={INSTAGRAM_HOORDIDIT}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-full border border-line bg-surface px-4 py-[9px] text-[13px] font-semibold text-body no-underline hover:text-ink hover:no-underline"
             >
-              Instagram
+              @hoordidit
+            </a>
+            <a
+              href={INSTAGRAM_HOURRAHMED}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-line bg-surface px-4 py-[9px] text-[13px] font-semibold text-body no-underline hover:text-ink hover:no-underline"
+            >
+              @hourrahmed
             </a>
             <a
               href={TIKTOK}
@@ -186,11 +198,21 @@ export default function Home() {
                 , “round trip”.
               </p>
             </div>
-            <p className="m-0 text-[17px] leading-[1.65] text-body text-pretty">
-              A fly wakes up on a plane and lands in a country where it understands nothing — not
-              the language, not the signs, not the traffic. It spends the whole book trying to find
-              the one place that would feel like home: a rubbish tip. Six story pages, silent-comedy
-              timing, written and drawn in Egyptian colloquial Arabic.
+            <p
+              dir="rtl"
+              lang="ar"
+              className="m-0 font-arabic text-[17px] leading-[1.75] text-body text-pretty"
+            >
+              عمرك فكرت الدبانة الي ركبت معاك العربية من اسكندرية وهشتها خرجتها من الشباك عالصحراوي
+              عملت أيه؟
+              <br />
+              دا الي حصل مع شريفة لما صحيت لقيت نفسها ركبت الطيارة وراحت بلد
+              <br />
+              جديدة
+              <br />
+              يا ترى هندور على ايه يساعدها
+              <br />
+              وهتوصله ازاي؟
             </p>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-px overflow-hidden rounded-xl border border-line bg-line">
               {FACTS.map((fact) => (
@@ -266,7 +288,7 @@ export default function Home() {
 
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
         <SectionEyebrow index="05" title="Works on paper" />
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6">
+        <div className="grid grid-cols-2 gap-6">
           {ILLUSTRATIONS.map((art) => (
             <figure key={art.src} className="m-0 flex flex-col gap-2.5">
               <button
@@ -293,30 +315,11 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="06" title="Bookmarks" />
-        <p className="m-0 max-w-[620px] text-[15px] leading-[1.6] text-body">
-          A printed set sold at fairs — the same characters at object scale.
-        </p>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(72px,88px))] gap-4 justify-start sm:grid-cols-[repeat(5,minmax(0,88px))]">
-          {BOOKMARKS.map((src, i) => (
-            <button
-              key={src}
-              type="button"
-              onClick={() => setModal({ src, alt: `Bookmark ${i + 1}` })}
-              className="flex aspect-[1/4] w-full cursor-zoom-in items-center justify-center overflow-hidden rounded-lg border border-line bg-surface p-0"
-              aria-label={`View bookmark ${i + 1} in full size`}
-            >
-              <img
-                src={src}
-                alt={`Bookmark ${i + 1}`}
-                className="block h-full w-full object-contain"
-                loading="lazy"
-              />
-            </button>
-          ))}
-        </div>
-      </section>
+      {/* Bookmarks section intentionally hidden — keep assets on disk for later */}
+
+      <NotesSection index="06" />
+
+      <AboutSection index="07" />
 
       <footer className="flex w-full max-w-page flex-wrap items-start justify-between gap-6 border-t border-line pt-10">
         <div className="flex flex-col gap-1.5">
@@ -327,8 +330,11 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap gap-5 text-sm">
           <a href={EMAIL}>Email</a>
-          <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer">
-            Instagram
+          <a href={INSTAGRAM_HOORDIDIT} target="_blank" rel="noopener noreferrer">
+            @hoordidit
+          </a>
+          <a href={INSTAGRAM_HOURRAHMED} target="_blank" rel="noopener noreferrer">
+            @hourrahmed
           </a>
           <a href={TIKTOK} target="_blank" rel="noopener noreferrer">
             TikTok
