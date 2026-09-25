@@ -55,7 +55,7 @@ const PRODUCTS: Product[] = [
     subtitle: "All designs — digital and works on paper",
     image: (
       <img
-        src="/images/drawings/mattab.png"
+        src="/images/drawings/mattab.jpg"
         alt="Mattab illustration — sushi, road sign, and red shoes"
         className="block h-full w-full object-cover object-top"
         loading="lazy"

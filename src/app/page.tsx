@@ -55,7 +55,7 @@ const COMIC_PAGES: ComicPage[] = [
 
 const ILLUSTRATIONS = [
   {
-    src: "/images/drawings/mattab.png",
+    src: "/images/drawings/mattab.jpg",
     title: "Mattab",
     meta: "Digital and acrylic markers, 2025",
   },
@@ -274,24 +274,7 @@ export default function Home() {
       </section>
 
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="04" title="Digital Comics" />
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
-          {[1, 2].map((n) => (
-            <figure key={n} className="m-0 flex flex-col gap-2.5">
-              <div
-                className="aspect-[4/5] rounded-2xl border border-dashed border-line-strong bg-surface"
-                aria-hidden="true"
-              />
-              <figcaption className="text-[13px] text-muted">
-                <span className="font-semibold text-ink">Title</span> · digital · 2026
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="05" title="Illustrations" />
+        <SectionEyebrow index="04" title="Illustrations" />
         <div className="grid grid-cols-2 gap-6">
           {ILLUSTRATIONS.map((art) => (
             <figure key={art.src} className="m-0 flex flex-col gap-2.5">
@@ -314,18 +297,15 @@ export default function Home() {
             </figure>
           ))}
         </div>
-        <p className="m-0 max-w-[620px] text-sm leading-[1.6] text-muted">
-          Freehand work on paper.
-        </p>
       </section>
 
       {/* Bookmarks section intentionally hidden — keep assets on disk for later */}
 
-      <NotesSection index="06" />
+      <NotesSection index="05" />
 
-      <AtTheTableSection index="07" />
+      <AtTheTableSection index="06" />
 
-      <AboutSection index="08" />
+      <AboutSection index="07" />
 
       <footer className="flex w-full max-w-page flex-wrap items-start justify-between gap-6 border-t border-line pt-10">
         <div className="flex flex-col gap-1.5">
