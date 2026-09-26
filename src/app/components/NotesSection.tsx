@@ -12,30 +12,31 @@ const NOTES: Note[] = [
     workLabel: "ON MATTAB",
     title: (
       <>
-        The dot that fell off the <Ar>خ</Ar>
+        How is the Mattab <Ar>ح</Ar>areq?
       </>
     ),
     excerpt:
-      "A shoe, a sushi dinner and a broken road sign, and how the three of them ended up in the same drawing.",
+      "My instagram summer dump post but make it a sketch instead",
     thumb: "/images/notes/mattab-sign.jpg",
     thumbAlt: "Night road sign reading مطب حارق with glowing lights",
     paragraphs: [
       <>
-        Last summer on the north coast, driving back at night with my friends, we passed a sign that
+        Last summer with my friends in the north coast, walking back to our chalet salty and sandy at night, we passed a flashy sign that
         was supposed to read <Ar>مطب خارق</Ar>. The dot over the <Ar>خ</Ar> had gone out, so what
-        it actually said was <Ar>مطب حارق</Ar> — a burning speed bump. That is where the drawing
-        got its name.
+        it actually said was <Ar>مطب حارق</Ar> making it a spicy/flaming speed bump. I love this incident because it&apos;s one
+        of those times you are with your friends and you can&apos;t stop laughing at something that&apos;s not even that funny.
       </>,
       <>
-        The other two things in it are just as small. The shoes are my favourite Mary Janes, patent
-        black, worn with striped socks nearly every day that year. The chopsticks and the glass are
-        from a sushi dinner that was genuinely very good, the kind you keep bringing up months
-        later.
+        The shoes are my favourite Mary Janes, patent
+        black, worn with striped socks. Not much to mention except the aura I had
+        going to the office in these shoes.
       </>,
       <>
-        None of them mean anything on their own. Put together they are a fairly accurate picture of
-        one summer: what I wore, what I ate, and a sign that stayed funny long after the drive
-        home.
+        The sushi is just something i love lol. I was teaching my friends how to use chopsticks.
+      </>,
+      <>
+        It&apos;s just a combination of some things I really enjoyed that summer: what I wore, what I ate, and a sign that stayed funny long after the walk
+        back to the chalet.
       </>,
     ],
     sources: [
@@ -61,25 +62,24 @@ const NOTES: Note[] = [
     number: "NOTE 02",
     readTime: "2 MIN",
     workLabel: "ON FISH",
-    title: "The gift that became a batch",
+    title: "Why is my drawing on a mouse pad?",
     excerpt:
-      "A friend liked Fish so much it ended up on his desk — then a small special edition made its way to Cairo Comic Con.",
+      "A friend of mine liked my fish poster and somehow had the idea: this should be made into a mouse pad",
     thumb: "/images/notes/fish-mousepad.jpg",
     thumbAlt: "Fish mouse pad with a black wireless mouse on a white surface",
     paragraphs: [
       <>
-        A friend liked Fish so much that I had it printed as a mouse pad and gave it to him as a
-        gift. Seeing the drawing sit on a desk every day made it feel like it had left the page in
-        a useful way.
+        My fish poster came first, then a dear friend of mine liked it so much, he surprised me with a mouse pad with 
+        my drawing on it as a gift. I have to admit this was one of the most thoughtful and precious gifts I&apos;ve ever received.
       </>,
       <>
-        That was enough of a nudge. I made a small special-edition batch and brought them to Cairo
-        Comic Con — same fish, same red field of linework, just something you could actually use.
+        I loved the mouse pad and the touch it gives to my desk, and everyone of my friends and co-workers wanted one too!
+        so I decided to make a small special edition batch and start selling them at the very next chance i get.
       </>,
     ],
     sources: [
       {
-        src: "/images/drawings/fish.png",
+        src: "/images/drawings/fish.jpg",
         caption: "The drawing.",
         alt: "Original Fish illustration with orange and blue fish on a red patterned field",
       },
@@ -109,10 +109,16 @@ export function NotesSection({ index = "06" }: NotesSectionProps) {
     <>
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
         <div className="flex flex-col gap-3">
-          <SectionEyebrow index={index} title="Notes on the work" />
+          <SectionEyebrow
+            index={index}
+            title={
+              <>
+                Stories behind the work
+              </>
+            }
+          />
           <p className="m-0 max-w-[620px] text-[15px] leading-[1.6] text-muted">
-            Short written pieces about where a drawing came from. One per work, only when there is
-            something to say.
+            I love sharing the inpirations and stories behind my artworks, if they have one
           </p>
         </div>
 

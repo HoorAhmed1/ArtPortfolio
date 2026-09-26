@@ -7,6 +7,7 @@ import { AboutSection } from "@/app/components/AboutSection"
 import { AtTheTableSection } from "@/app/components/AtTheTableSection"
 import { NotesSection } from "@/app/components/NotesSection"
 import { SectionEyebrow } from "@/app/components/SectionEyebrow"
+import { ILLUSTRATIONS } from "@/app/data/illustrations"
 
 const EMAIL = "mailto:Hourahmed11@gmail.com"
 const INSTAGRAM_HOORDIDIT = "https://www.instagram.com/hoordidit"
@@ -18,61 +19,38 @@ const DRIVE =
 const COMIC_PAGES: ComicPage[] = [
   {
     src: "/images/comic/p1.jpeg",
-    caption: "Lands. Looks for a bus to the nearest تجمع — settles for a taxi.",
+    caption: "Lands. Looks for a bus to the تجمع and settles for a taxi.",
     alt: "Page 1 — the fly leaves the airport, reads street signs, and takes a taxi",
   },
   {
     src: "/images/comic/p2.jpeg",
-    caption: "Asks a cat for directions. Gets claws instead.",
+    caption: "Asks a cat for directions, but the cat attacks him.",
     alt: "Page 2 — the fly asks a cat for help and flees, then finds a glowing screen",
   },
   {
     src: "/images/comic/p3.jpeg",
-    caption: "Full-page splash. The bus arrives and the street arrives with it.",
+    caption: "Finally a public transportation arrives!",
     alt: "Page 3 — full-page splash of a city bus and crowded street",
   },
   {
     src: "/images/comic/p4.jpeg",
-    caption: "Finally a bus — then swatted off and left in the rain.",
-    alt: "Page 4 — inside the crowded bus, swatted out onto the highway, rain",
+    caption: "But not so fast! a passenger swats him off the bus and he is left in the rain.",
+    alt: "Page 4 — inside the crowded bus, swatted out onto the highway, rained on",
   },
   {
     src: "/images/comic/p5.jpeg",
-    caption: "Hitches a bicycle. Catches a smell it recognises.",
-    alt: "Page 5 — hitching a ride on a bicycle, then an old alley",
+    caption: "Settled for a ride on a bicycle, then a familiar smell hits him.",
+    alt: "Page 5 — settled for a ride on a bicycle, then a familiar smell hits him",
   },
   {
     src: "/images/comic/p6.jpeg",
-    caption: "Arrives. أخيرًا — بيتي الجديد",
+    caption: "Arrives. أخيرًا! بيتي الجديد",
     alt: "Page 6 — last story page, the rubbish collection point",
   },
   {
     src: "/images/comic/back.jpeg",
     caption: "Back cover.",
     alt: "Back cover of ذهاب وعودة — blurb and the fly against a blue sky",
-  },
-]
-
-const ILLUSTRATIONS = [
-  {
-    src: "/images/drawings/mattab.png",
-    title: "Mattab",
-    meta: "Digital and acrylic markers, 2025",
-  },
-  {
-    src: "/images/drawings/v7.png",
-    title: "V7",
-    meta: "Digital and acrylic markers, 2025",
-  },
-  {
-    src: "/images/drawings/fish.png",
-    title: "Fish",
-    meta: "Markers and digital, 2025",
-  },
-  {
-    src: "/images/drawings/cards.jpg",
-    title: "Cards",
-    meta: "Digital and markers, 2026",
   },
 ]
 
@@ -98,23 +76,23 @@ const PROCESS_STEPS = [
   {
     title: "Rough layout",
     description:
-      "A phone photo of the scribbled panel plan for one page — boxes, arrows, where the balloons sit.",
+      "A story board for the plots and events",
     src: "/images/process/rough-layout.jpg",
     alt: "Pencil sketchbook page with a five-panel comic rough layout and handwritten Arabic text",
   },
   {
-    title: "Pencils before ink",
+    title: "Pencil drafts",
     description:
-      "The same page photographed at the pencil stage, so it can be read against the finished page above.",
+      "The process of drafting all panels in pencil on paper",
     src: "/images/process/pencils-before-ink.jpg",
     alt: "Full pencil comic page with five panels before inking",
   },
   {
     title: "Character sheet",
     description:
-      "A pencil study of the bee character, with notes for each journey: immediate goal, conflict, what changes.",
+      "A pencil study of the fly character, designing the character's expressions and body language",
     src: "/images/process/character-sheet.jpg",
-    alt: "Pencil character sheet of the bee with journey notes",
+    alt: "Pencil character sheet of the fly with journey notes",
   },
 ]
 
@@ -167,9 +145,9 @@ export default function Home() {
           </div>
         </div>
         <p className="m-0 max-w-[640px] text-[19px] leading-[1.6] text-body text-pretty animate-rise-in-delay-1">
-          I draw in pencil and ink, scan, and finish digitally. My work is about ordinary people
-          moving through the city — waiting, getting lost, arriving somewhere they did not plan to
-          arrive.
+        I view my art as a way to impress not express, which is in a way or another expressive of how I view life, as full, chaotic, magical, colorful, dull, repetitive, and beautiful as it is. 
+        <br />
+        I use acrylic markers for drawing on paper, and Krita for drawing digitally. 
         </p>
       </header>
 
@@ -191,13 +169,13 @@ export default function Home() {
               >
                 ذباب وعودة
               </h3>
-              <p className="m-0 text-[15px] text-muted">
+              {/* <p className="m-0 text-[15px] text-muted">
                 Dhobab wa ‘Awda — a play on{" "}
                 <span dir="rtl" className="font-arabic">
                   ذهاب وعودة
                 </span>
                 , “round trip”.
-              </p>
+              </p> */}
             </div>
             <p
               dir="rtl"
@@ -239,93 +217,78 @@ export default function Home() {
 
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
         <SectionEyebrow index="03" title="Process" />
-        <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0 md:pb-0 md:snap-none">
-          {PROCESS_STEPS.map((step) => (
-            <figure
-              key={step.title}
-              className="m-0 flex w-[min(72vw,260px)] shrink-0 snap-start flex-col gap-2.5 md:w-auto md:min-w-0 md:shrink"
-            >
-              <button
-                type="button"
-                onClick={() => setModal({ src: step.src, alt: step.alt })}
-                className="aspect-[3/4] cursor-zoom-in overflow-hidden rounded-2xl border border-line bg-surface p-0 text-left transition-opacity hover:opacity-90"
-                aria-label={`View ${step.title} in full size`}
+        <div className="-mx-6 overflow-x-auto snap-x snap-mandatory scroll-px-6 pb-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:overflow-visible md:scroll-px-0 md:pb-0 md:snap-none">
+          <div className="flex w-max gap-4 px-6 md:grid md:w-full md:grid-cols-3 md:gap-5 md:px-0">
+            {PROCESS_STEPS.map((step) => (
+              <figure
+                key={step.title}
+                className="m-0 flex w-[min(72vw,260px)] shrink-0 snap-start flex-col gap-2.5 md:w-auto md:min-w-0 md:shrink"
               >
-                <img
-                  src={step.src}
-                  alt={step.alt}
-                  className="block h-full w-full object-cover object-top"
-                  loading="lazy"
-                />
-              </button>
-              <figcaption className="flex flex-col gap-1">
-                <span className="text-[13px] font-bold text-ink">{step.title}</span>
-                <span className="text-[13px] leading-[1.5] text-muted">
-                  {step.description}
-                </span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <p className="m-0 max-w-[620px] text-sm leading-[1.6] text-muted">
-          Juries read process as proof of craft. Three images here — roughs, pencils, a character
-          sheet — are worth more than three more finished posters.
-        </p>
-      </section>
-
-      <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="04" title="Digital Comics" />
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
-          {[1, 2].map((n) => (
-            <figure key={n} className="m-0 flex flex-col gap-2.5">
-              <div
-                className="aspect-[4/5] rounded-2xl border border-dashed border-line-strong bg-surface"
-                aria-hidden="true"
-              />
-              <figcaption className="text-[13px] text-muted">
-                <span className="font-semibold text-ink">Title</span> · digital · 2026
-              </figcaption>
-            </figure>
-          ))}
+                <button
+                  type="button"
+                  onClick={() => setModal({ src: step.src, alt: step.alt })}
+                  className="aspect-[3/4] cursor-zoom-in overflow-hidden rounded-2xl border border-line bg-surface p-0 text-left transition-opacity hover:opacity-90"
+                  aria-label={`View ${step.title} in full size`}
+                >
+                  <img
+                    src={step.src}
+                    alt={step.alt}
+                    className="block h-full w-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </button>
+                <figcaption className="flex flex-col gap-1">
+                  <span className="text-[13px] font-bold text-ink">{step.title}</span>
+                  <span className="text-[13px] leading-[1.5] text-muted">
+                    {step.description}
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="05" title="Illustrations" />
+        <SectionEyebrow index="04" title="Illustrations" />
         <div className="grid grid-cols-2 gap-6">
-          {ILLUSTRATIONS.map((art) => (
-            <figure key={art.src} className="m-0 flex flex-col gap-2.5">
-              <button
-                type="button"
-                onClick={() => setModal({ src: art.src, alt: art.title })}
-                className="cursor-zoom-in overflow-hidden rounded-xl border border-line bg-surface p-0 text-left transition-opacity hover:opacity-90"
-                aria-label={`View ${art.title} in full size`}
-              >
-                <img
-                  src={art.src}
-                  alt={art.title}
-                  className="block h-auto w-full"
-                  loading="lazy"
+          {ILLUSTRATIONS.map((art, i) => (
+            <figure key={art.src ?? `placeholder-${i}`} className="m-0 flex flex-col gap-2.5">
+              {art.placeholder || !art.src ? (
+                <div
+                  className="aspect-[4/5] rounded-2xl border border-dashed border-line-strong bg-surface"
+                  aria-hidden
                 />
-              </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setModal({ src: art.src!, alt: art.title })}
+                  className="cursor-zoom-in overflow-hidden rounded-xl border border-line bg-surface p-0 text-left transition-opacity hover:opacity-90"
+                  aria-label={`View ${art.title} in full size`}
+                >
+                  <img
+                    src={art.src}
+                    alt={art.title}
+                    className="block h-auto w-full"
+                    loading="lazy"
+                  />
+                </button>
+              )}
               <figcaption className="text-[13px] text-muted">
                 <span className="font-semibold text-ink">{art.title}</span> · {art.meta}
               </figcaption>
             </figure>
           ))}
         </div>
-        <p className="m-0 max-w-[620px] text-sm leading-[1.6] text-muted">
-          Freehand work on paper.
-        </p>
       </section>
 
       {/* Bookmarks section intentionally hidden — keep assets on disk for later */}
 
-      <NotesSection index="06" />
+      <NotesSection index="05" />
 
-      <AtTheTableSection index="07" />
+      <AtTheTableSection index="06" />
 
-      <AboutSection index="08" />
+      <AboutSection index="07" />
 
       <footer className="flex w-full max-w-page flex-wrap items-start justify-between gap-6 border-t border-line pt-10">
         <div className="flex flex-col gap-1.5">
