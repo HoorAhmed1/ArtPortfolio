@@ -114,7 +114,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-2.5">
             <a
               href={EMAIL}
-              className="inline-flex items-center rounded-full bg-brand px-4 py-[9px] text-[13px] font-bold text-ink no-underline hover:text-ink hover:no-underline"
+              className="inline-flex items-center rounded-full bg-navy px-4 py-[9px] text-[13px] font-bold text-white no-underline hover:text-white hover:no-underline"
             >
               Email
             </a>
@@ -144,6 +144,7 @@ export default function Home() {
             </a>
           </div>
         </div>
+
         <p className="m-0 max-w-[640px] text-[19px] leading-[1.6] text-body text-pretty animate-rise-in-delay-1">
         I view my art as a way to impress not express, which is in a way or another expressive of how I view life, as full, chaotic, magical, colorful, dull, repetitive, and beautiful as it is. 
         <br />
@@ -263,13 +264,17 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => setModal({ src: art.src!, alt: art.title })}
-                  className="cursor-zoom-in overflow-hidden rounded-xl border border-line bg-surface p-0 text-left transition-opacity hover:opacity-90"
+                  className="aspect-[4/5] cursor-zoom-in overflow-hidden rounded-xl border border-line bg-surface p-0 text-left transition-opacity hover:opacity-90"
                   aria-label={`View ${art.title} in full size`}
                 >
                   <img
                     src={art.src}
                     alt={art.title}
-                    className="block h-auto w-full"
+                    className={`block h-full w-full ${
+                      art.objectFit === "contain"
+                        ? "object-contain object-center"
+                        : "object-cover object-top"
+                    }`}
                     loading="lazy"
                   />
                 </button>
