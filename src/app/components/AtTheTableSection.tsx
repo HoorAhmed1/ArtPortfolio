@@ -198,15 +198,17 @@ function PostersCard() {
   return (
     <article className={cardClassName}>
       <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-inset">
-        <div className="flex h-full w-full items-center justify-center">
-          <img
-            key={art.src}
-            src={art.src}
-            alt={`${art.title} illustration`}
-            className="max-h-full max-w-full object-contain object-center"
-            loading={index === 0 ? "eager" : "lazy"}
-          />
-        </div>
+        <img
+          key={art.src}
+          src={art.src}
+          alt={`${art.title} illustration`}
+          className={`block h-full w-full ${
+            art.objectFit === "contain"
+              ? "object-contain object-center"
+              : "object-cover object-top"
+          }`}
+          loading={index === 0 ? "eager" : "lazy"}
+        />
         <CarouselNav
           index={index}
           count={count}

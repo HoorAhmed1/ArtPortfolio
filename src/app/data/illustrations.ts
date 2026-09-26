@@ -3,6 +3,8 @@ export type Illustration = {
   meta: string
   src?: string
   placeholder?: boolean
+  /** How the image fills the fixed frame. Defaults to cover (cropped, top-anchored). */
+  objectFit?: "cover" | "contain"
 }
 
 export const ILLUSTRATIONS: Illustration[] = [
@@ -12,9 +14,10 @@ export const ILLUSTRATIONS: Illustration[] = [
     meta: "Digital and markers, 2026",
   },
   {
-    title: "Title",
-    meta: "medium, year",
-    placeholder: true,
+    src: "/images/drawings/metro.jpg",
+    title: "Metro",
+    meta: "Digital, 2026",
+    objectFit: "contain",
   },
   {
     src: "/images/drawings/vcola.jpg",
@@ -29,12 +32,12 @@ export const ILLUSTRATIONS: Illustration[] = [
   {
     src: "/images/drawings/fish.jpg",
     title: "Fish",
-    meta: "Markers and digital, 2025",
+    meta: "Digital and acrylic markers, 2025",
   },
   {
     src: "/images/drawings/tiger.jpg",
     title: "Tiger",
-    meta: "medium, year",
+    meta: "Digital and acrylic markers, 2026",
   },
 ]
 
