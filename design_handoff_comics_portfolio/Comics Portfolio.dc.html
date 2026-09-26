@@ -133,7 +133,7 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
       <div style="border-radius: 16px; border: 1px dashed var(--color-line-strong, #CDD3DC); background: var(--color-surface, #FFFFFF); min-height: 260px; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; padding: 20px;">
         <span style="font-size: 13px; font-weight: 700; color: var(--color-ink, #101828);">Rough layout</span>
-        <span style="font-size: 13px; line-height: 1.5; color: var(--color-muted, #667085);">A phone photo of the scribbled panel plan for one page — boxes, arrows, where the balloons sit.</span>
+        <span style="font-size: 13px; line-height: 1.5; color: var(--color-muted, #667085);">A story board for the plots and events        </span>
       </div>
       <div style="border-radius: 16px; border: 1px dashed var(--color-line-strong, #CDD3DC); background: var(--color-surface, #FFFFFF); min-height: 260px; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; padding: 20px;">
         <span style="font-size: 13px; font-weight: 700; color: var(--color-ink, #101828);">Pencils before ink</span>
@@ -144,7 +144,6 @@
         <span style="font-size: 13px; line-height: 1.5; color: var(--color-muted, #667085);">The fly drawn six or seven times on one sheet: front, side, walking, angry, scared, delighted.</span>
       </div>
     </div>
-    <p style="margin: 0; max-width: 620px; font-size: 14px; line-height: 1.6; color: var(--color-muted, #667085);">Juries read process as proof of craft. Three images here — roughs, pencils, a character sheet — are worth more than three more finished posters.</p>
   </section>
 
   <section style="width: 100%; max-width: 1040px; display: flex; flex-direction: column; gap: 32px; padding-bottom: 88px;">
@@ -231,12 +230,12 @@ class Component extends DCLogic {
   state = { i: 0 };
 
   pages = [
-    { src: 'comic/p1.jpeg', caption: 'Lands. Looks for a bus to the nearest تجمع — settles for a taxi.', alt: 'Page 1 — the fly leaves the airport, reads street signs, and takes a taxi' },
-    { src: 'comic/p2.jpeg', caption: 'Asks a cat for directions. Gets claws instead.', alt: 'Page 2 — the fly asks a cat for help and flees, then finds a glowing screen' },
-    { src: 'comic/p3.jpeg', caption: 'Full-page splash. The bus arrives and the street arrives with it.', alt: 'Page 3 — full-page splash of a city bus and crowded street' },
-    { src: 'comic/p4.jpeg', caption: 'Finally a bus — then swatted off and left in the rain.', alt: 'Page 4 — inside the crowded bus, swatted out onto the highway, rain' },
-    { src: 'comic/p5.jpeg', caption: 'Hitches a bicycle. Catches a smell it recognises.', alt: 'Page 5 — hitching a ride on a bicycle, then an old alley' },
-    { src: 'comic/p6.jpeg', caption: 'Arrives. أخيرًا — بيتي الجديد', alt: 'Page 6 — last story page, the rubbish collection point' },
+    { src: 'comic/p1.jpeg', caption: 'Lands. Looks for a bus to the تجمع and settles for a taxi.', alt: 'Page 1 — the fly leaves the airport, reads street signs, and takes a taxi' },
+    { src: 'comic/p2.jpeg', caption: 'Asks a cat for directions, but the cat attacks him.', alt: 'Page 2 — the fly asks a cat for help and flees, then finds a glowing screen' },
+    { src: 'comic/p3.jpeg', caption: 'Finally a public transportation arrives!', alt: 'Page 3 — full-page splash of a city bus and crowded street' },
+    { src: 'comic/p4.jpeg', caption: 'But not so fast! a passenger swats him off the bus and he is left in the rain.', alt: 'Page 4 — inside the crowded bus, swatted out onto the highway, rain' },
+    { src: 'comic/p5.jpeg', caption: 'Settled for a ride on a bicycle, then a familiar smell hits him.', alt: 'Page 5 — hitching a ride on a bicycle, then an old alley' },
+    { src: 'comic/p6.jpeg', caption: 'Arrives. أخيرًا! بيتي الجديد', alt: 'Page 6 — last story page, the rubbish collection point' },
     { src: 'comic/back.jpeg', caption: 'Back cover.', alt: 'Back cover of ذهاب وعودة — blurb and the fly against a blue sky' }
   ];
 
