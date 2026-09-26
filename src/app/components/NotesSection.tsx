@@ -23,8 +23,8 @@ const NOTES: Note[] = [
       <>
         Last summer with my friends in the north coast, walking back to our chalet salty and sandy at night, we passed a flashy sign that
         was supposed to read <Ar>مطب خارق</Ar>. The dot over the <Ar>خ</Ar> had gone out, so what
-        it actually said was <Ar>مطب حارق</Ar> making it a spicy/flaming speed bump. I love this incident because it's one
-        of those times you are with your friends and you can't stop laughing at something that's not even that funny.
+        it actually said was <Ar>مطب حارق</Ar> making it a spicy/flaming speed bump. I love this incident because it&apos;s one
+        of those times you are with your friends and you can&apos;t stop laughing at something that&apos;s not even that funny.
       </>,
       <>
         The shoes are my favourite Mary Janes, patent
@@ -35,7 +35,7 @@ const NOTES: Note[] = [
         The sushi is just something i love lol. I was teaching my friends how to use chopsticks.
       </>,
       <>
-        It's just a combination of some things I really enjoyed that summer: what I wore, what I ate, and a sign that stayed funny long after the walk
+        It&apos;s just a combination of some things I really enjoyed that summer: what I wore, what I ate, and a sign that stayed funny long after the walk
         back to the chalet.
       </>,
     ],
@@ -70,7 +70,7 @@ const NOTES: Note[] = [
     paragraphs: [
       <>
         My fish poster came first, then a dear friend of mine liked it so much, he surprised me with a mouse pad with 
-        my drawing on it as a gift. I have to admit this was one of the most thoughtful and precious gifts I've ever received.
+        my drawing on it as a gift. I have to admit this was one of the most thoughtful and precious gifts I&apos;ve ever received.
       </>,
       <>
         I loved the mouse pad and the touch it gives to my desk, and everyone of my friends and co-workers wanted one too!
