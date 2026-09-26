@@ -14,8 +14,8 @@ export const ILLUSTRATIONS: Illustration[] = [
     meta: "Digital and markers, 2026",
   },
   {
-    src: "/images/drawings/transit.jpg",
-    title: "Transit",
+    src: "/images/drawings/metro.jpg",
+    title: "Metro",
     meta: "Digital, 2026",
     objectFit: "contain",
   },
