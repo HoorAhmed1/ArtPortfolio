@@ -49,14 +49,24 @@ export function AboutSection({ index = "08" }: AboutSectionProps) {
               Hour Ahmed · comics and mixed-media
             </p>
             <p className="m-0 text-[15px] leading-[1.65] text-body text-pretty sm:text-[16px]">
-              I make comics and drawings on paper — pencil and ink first, sometimes paint, then
-              scan and finish digitally when the piece needs it. A lot of what I draw comes from
-              moving through Egyptian cities: waiting rooms, coastal roads, jokes that stick longer
-              than the trip home.
+              Graduated with a bachelor degree in Software Engineering from Cairo University, and
+              studied a semester abroad in Grand Valley State University.
             </p>
             <p className="m-0 text-[15px] leading-[1.65] text-body text-pretty sm:text-[16px]">
-              The work sits between short stories and quiet observation — panels when the narrative
-              asks for them, single images when a scene is enough on its own.
+              As part of the Global UGRAD scholarship, I studied Art abroad and visited MoMa, and
+              Art Institute of Chicago, where I saw Van Gogh’s Starry Night and Dalí and checked the
+              biggest boxes of my wishlist.
+            </p>
+            <p className="m-0 text-[15px] leading-[1.65] text-body text-pretty sm:text-[16px]">
+              I do different forms of art, but my favorite is creating comic books to send a message
+              through art. I also do acrylic posters, and I love doing geometric patterns and
+              studying them. As a side thing, I do fabric design for @HoorDesigns which is my
+              family’s business.
+            </p>
+            <p className="m-0 text-[15px] leading-[1.65] text-body text-pretty sm:text-[16px]">
+              Whether through stories, posters, patterns, or illustrations, I love to create
+              artworks that speak to the viewer, and tells them something -sometimes whispering,
+              sometimes shouting, and other times completely missing the point.
             </p>
           </div>
 

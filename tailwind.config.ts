@@ -20,6 +20,7 @@ const config: Config = {
         faint: "var(--color-faint)",
         brand: "var(--color-brand)",
         "brand-tint": "var(--color-brand-tint)",
+        navy: "var(--color-navy)",
         link: "var(--color-link)",
       },
       maxWidth: {

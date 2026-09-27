@@ -1,6 +1,8 @@
+import type { ReactNode } from "react"
+
 type SectionEyebrowProps = {
   index: string
-  title: string
+  title: ReactNode
 }
 
 export function SectionEyebrow({ index, title }: SectionEyebrowProps) {
