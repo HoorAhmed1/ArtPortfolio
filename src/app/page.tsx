@@ -11,7 +11,7 @@ import { SectionEyebrow } from "@/app/components/SectionEyebrow"
 const EMAIL = "mailto:Hourahmed11@gmail.com"
 const INSTAGRAM_HOORDIDIT = "https://www.instagram.com/hoordidit"
 const INSTAGRAM_HOURRAHMED = "https://www.instagram.com/hourrahmed"
-const TIKTOK = "https://www.tiktok.com/@hourahmed"
+const TIKTOK = "https://www.tiktok.com/@hourahmed1"
 const DRIVE =
   "https://drive.google.com/drive/folders/1dvrNgnnLliSLaF29AVwjjJ8WsnpET1N-?usp=drive_link"
 
