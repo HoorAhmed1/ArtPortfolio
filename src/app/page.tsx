@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { ComicReader, type ComicPage } from "@/app/components/ComicReader"
 import { ImageLightbox } from "@/app/components/ImageLightbox"
 import { AboutSection } from "@/app/components/AboutSection"
 import { AtTheTableSection } from "@/app/components/AtTheTableSection"
@@ -16,44 +15,8 @@ const TIKTOK = "https://www.tiktok.com/@hourahmed1"
 const DRIVE =
   "https://drive.google.com/drive/folders/1dvrNgnnLliSLaF29AVwjjJ8WsnpET1N-?usp=drive_link"
 
-const COMIC_PAGES: ComicPage[] = [
-  {
-    src: "/images/comic/p1.jpeg",
-    caption: "Lands. Looks for a bus to the تجمع and settles for a taxi.",
-    alt: "Page 1 — the fly leaves the airport, reads street signs, and takes a taxi",
-  },
-  {
-    src: "/images/comic/p2.jpeg",
-    caption: "Asks a cat for directions, but the cat attacks him.",
-    alt: "Page 2 — the fly asks a cat for help and flees, then finds a glowing screen",
-  },
-  {
-    src: "/images/comic/p3.jpeg",
-    caption: "Finally a public transportation arrives!",
-    alt: "Page 3 — full-page splash of a city bus and crowded street",
-  },
-  {
-    src: "/images/comic/p4.jpeg",
-    caption: "But not so fast! a passenger swats him off the bus and he is left in the rain.",
-    alt: "Page 4 — inside the crowded bus, swatted out onto the highway, rained on",
-  },
-  {
-    src: "/images/comic/p5.jpeg",
-    caption: "Settled for a ride on a bicycle, then a familiar smell hits him.",
-    alt: "Page 5 — settled for a ride on a bicycle, then a familiar smell hits him",
-  },
-  {
-    src: "/images/comic/p6.jpeg",
-    caption: "Arrives. أخيرًا! بيتي الجديد",
-    alt: "Page 6 — last story page, the rubbish collection point",
-  },
-  {
-    src: "/images/comic/back.jpeg",
-    caption: "Back cover.",
-    alt: "Back cover of ذهاب وعودة — blurb and the fly against a blue sky",
-  },
-]
-
+// Comic reader (interior pages + back cover) hidden while the book is being published —
+// assets kept in public/images/comic/ (p1–p6, back.jpeg). Cover still shown in section 01.
 // Bookmarks section hidden — assets kept in public/images/bookmarks/
 // const BOOKMARKS = [
 //   "/images/bookmarks/bookmark1.png",
@@ -212,12 +175,7 @@ export default function Home() {
       </section>
 
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="02" title="Read it — six pages, then the back cover" />
-        <ComicReader pages={COMIC_PAGES} />
-      </section>
-
-      <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="03" title="Process" />
+        <SectionEyebrow index="02" title="Process" />
         <div className="-mx-6 overflow-x-auto snap-x snap-mandatory scroll-px-6 pb-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:overflow-visible md:scroll-px-0 md:pb-0 md:snap-none">
           <div className="flex w-max gap-4 px-6 md:grid md:w-full md:grid-cols-3 md:gap-5 md:px-0">
             {PROCESS_STEPS.map((step) => (
@@ -251,7 +209,7 @@ export default function Home() {
       </section>
 
       <section className="flex w-full max-w-page flex-col gap-8 pb-[88px]">
-        <SectionEyebrow index="04" title="Illustrations" />
+        <SectionEyebrow index="03" title="Illustrations" />
         <div className="grid grid-cols-2 gap-6">
           {ILLUSTRATIONS.map((art, i) => (
             <figure key={art.src ?? `placeholder-${i}`} className="m-0 flex flex-col gap-2.5">
@@ -289,11 +247,11 @@ export default function Home() {
 
       {/* Bookmarks section intentionally hidden — keep assets on disk for later */}
 
-      <NotesSection index="05" />
+      <NotesSection index="04" />
 
-      <AtTheTableSection index="06" />
+      <AtTheTableSection index="05" />
 
-      <AboutSection index="07" />
+      <AboutSection index="06" />
 
       <footer className="flex w-full max-w-page flex-wrap items-start justify-between gap-6 border-t border-line pt-10">
         <div className="flex flex-col gap-1.5">
